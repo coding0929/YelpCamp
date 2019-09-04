@@ -22,7 +22,7 @@ app.set("view engine","ejs");
 // mongoose.connect(url);
 
 // mongoose.connect("mongodb://localhost/Yelp_Camp");
-mongoose.connect("mongodb+srv://Yi:password123@cluster0-y9clr.mongodb.net/test?retryWrites=true&w=majority",{
+mongoose.connect("mongodb+srv://Yi:123@cluster0-y9clr.mongodb.net/test?retryWrites=true&w=majority",{
     useNewUrlParser:true,
     useCreateIndex:true
 })
