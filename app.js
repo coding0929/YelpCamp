@@ -19,8 +19,8 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine","ejs");
 // mongoose.connect("mongodb://localhost/Yelp_Camp");
 mongoose.connect("mongodb+srv://Yi:123@cluster0-1xnxh.mongodb.net/test?retryWrites=true&w=majority",{
-    useNewUrlParser:true;
-    useCreateIndex:true;
+    useNewUrlParser:true,
+    useCreateIndex:true
 })
 app.use(express.static(__dirname+"/public"));
 app.use(methodOverride("_method"));
