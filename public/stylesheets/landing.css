@@ -1,0 +1,70 @@
+#landing-header{
+    text-align: center;
+    position: relative;
+    margin: 30rem auto 40rem auto;
+    z-index:1; /*在最上层*/
+    
+}
+#landing-header h1{
+    color: #fff;
+}
+body{
+    background: #000;
+}
+.slideshow li:nth-child(1) { 
+  background-image: url(http://i.imgur.com/K3mPv14.jpg) 
+}
+.slideshow li:nth-child(2) { 
+  background-image: url(http://i.imgur.com/SBEmFpv.jpg);
+  animation-delay: 10s; 
+}
+.slideshow li:nth-child(3) { 
+  background-image: url(http://i.imgur.com/emvhOnb.jpg);
+  animation-delay: 20s; 
+}
+.slideshow li:nth-child(4) { 
+  background-image: url(http://i.imgur.com/2LSMCmJ.jpg);
+  animation-delay: 30s; 
+}
+.slideshow li:nth-child(5) { 
+  background-image: url(http://i.imgur.com/TVGe0Ef.jpg);
+  animation-delay: 40s; /* start time*/
+}
+.slideshow li{
+  width: 100%;
+  height: 100%;
+  top:0;
+  left:0;/*absolute top and left 位置*/
+  background-size:cover;
+  background-position:50% 50%;
+  position: absolute;
+  background-repeat:no-repeat;
+  z-index:0;
+  opacity:0;
+  animation:imageAnimation 50s linear infinite;/* animationname/duation/timing function/iteration count */
+}
+/*创建由当前样式逐渐改为新样式的动画效果。对于一个"@keyframes"中的样式规则是由多个百分比构成的如“0%”到"100%"之间，我们可以使用“from”和“to”来代表一个动画是从哪开始，到那结束，"from“就相当与0%，”to"就相当于100%。*/
+@keyframes imageAnimation { 
+  0% { 
+    opacity: 0.4; 
+    animation-timing-function: linear;
+  }
+  10% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+    
+  }
+  20% {
+    opacity: 1;
+       
+  }
+  30% {
+    opacity: 0
+  }
+}
+/*每张li从in 到out是15s, 5s in, 5s stay, 5s fade out, 10% 是5s
+
+/* Older browser support - class added by modernizr */
+.no-cssanimations .slideshow li {
+	opacity: 1;
+}

@@ -1,0 +1,10 @@
+#card-2{
+    margin-top:20px;
+    background: #ECE4E4;
+}
+.card .card-text{
+    padding:9px;
+}
+#deleteForm{
+    display:inline;
+}
