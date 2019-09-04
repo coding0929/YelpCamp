@@ -51,6 +51,6 @@ app.use(authRoutes);
 
 //seedDB();
 
-app.listen(process.env.PORT||9000, function(){
-    console.log("YelpCamp server start");
+app.listen(process.env.PORT || 9000, process.env.IP, function(){
+  console.log("YelpCamp has started!");
 });
