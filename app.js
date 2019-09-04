@@ -18,18 +18,14 @@ var commentRoutes= require("./routes/comments"),
 app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine","ejs");
 
-var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp_v2";
-mongoose.connect(url);
-// var url=process.env.DATABASEURL||"mongodb://localhost/Yelp_Camp";
-// mongoose.connect(url)
-//       .then(() => console.log(`Database connected`))
-//       .catch(err => console.log(`Database connection error: ${err.message}`));
+// var url = process.env.DATABASEURL || "mongodb://localhost/Yelp_Camp";
+// mongoose.connect(url);
 
 // mongoose.connect("mongodb://localhost/Yelp_Camp");
-// mongoose.connect("mongodb+srv://Yi:123@cluster0-1xnxh.mongodb.net/test?retryWrites=true&w=majority",{
-//     useNewUrlParser:true,
-//     useCreateIndex:true
-// })
+mongoose.connect("mongodb+srv://Yi:123@cluster0-y9clr.mongodb.net/test?retryWrites=true&w=majority",{
+    useNewUrlParser:true,
+    useCreateIndex:true
+})
 app.use(express.static(__dirname+"/public"));
 app.use(methodOverride("_method"));
 app.use(flash());
